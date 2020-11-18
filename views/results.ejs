@@ -10,18 +10,22 @@
     </head>
     <body>
         <form action="/search" method="GET">
-            <button type="submit">Search Page</button>
+            <button type="submit">Back to Search Page</button>
         </form>
-        <ol>
-            <% for (var i=0; i < repos.length; i++) {%>
-                <li id="project-title"> <b><%= repos[i].title %></b> </li>
-                <ul>
-                    <li> <%= repos[i].ownerName %> </li>
-                    <li> <%= repos[i].description %> </li>
-                    <li><a href=" <%= repos[i].repoURL %> "> <%= repos[i].repoURL %> </a></li>
-                </ul>
-                </br>
-            <% } %>
-        </ol>
+        <% if(message) { %>
+            <h3><%=message%></h3>
+        <% } else { %>
+            <ol>
+                <% for (var i=0; i < repos.length; i++) {%>
+                    <li id="project-title"> <b><%= repos[i].title %></b> </li>
+                    <ul>
+                        <li> <%= repos[i].ownerName %> </li>
+                        <li> <%= repos[i].description %> </li>
+                        <li><a href=" <%= repos[i].repoURL %> "> <%= repos[i].repoURL %> </a></li>
+                    </ul>
+                    </br>
+                <% } %>
+            </ol>
+        <% } %>
     </body>
 </html>

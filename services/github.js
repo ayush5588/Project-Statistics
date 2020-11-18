@@ -7,8 +7,10 @@ var getRepo = (req,res,searchQuery)=>{
     client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${process.env.GITHUB_CLIENT_SECRET}`
       )
       .then((result) => {
+        if(result.data.total_count == 0){
+            return res.render("results", {message: `No repository found related to search query...`,repos: []});
+        }
         var main = [];
-        //console.log(result.data.items);
         result.data.items.forEach(function (repo) {
           var obj = {};
           (obj.title = repo.name),
@@ -17,7 +19,7 @@ var getRepo = (req,res,searchQuery)=>{
             (obj.repoURL = repo.html_url);
           main.push(obj);
         });
-        return res.render("results", { repos: main });
+        return res.render("results", { repos: main , message: ''});
       })
       .catch((e) => {
         console.log(`Error in fetching the data from the github: ${e}`);
