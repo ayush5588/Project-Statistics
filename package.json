@@ -4,6 +4,7 @@
   "description": "Get stats for the work present on the github same as yours",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "npm test"
   },
   "repository": {
