@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Results</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form action="/search" method="POST">
+            <input type="text" name="userQuery" placeholder="Enter your project name...">
+            <button type="submit">Search</button>
+        </form>
+        <ul>
+            <% for (var i=0; i < repos.length; i++) {%>
+                <li id="project-title"> <b><%= repos[i].title %></b> </li>
+                <ul>
+                    <li> <%= repos[i].description %> </li>
+                    <li> <%= repos[i].ownerName %> </li>
+                    <li> <%= repos[i].repoURL %> </li>
+                </ul>
+                </br>
+            <% } %>
+        </ul>
+    </body>
+</html>

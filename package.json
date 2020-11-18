@@ -1,0 +1,38 @@
+{
+  "name": "project-statistics",
+  "version": "1.0.0",
+  "description": "Get stats for the work present on the github same as yours",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayush5588/Project-Statistics.git"
+  },
+  "keywords": [
+    "github",
+    "api",
+    "webapp"
+  ],
+  "author": "Ayush Sinha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayush5588/Project-Statistics/issues"
+  },
+  "homepage": "https://github.com/ayush5588/Project-Statistics#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "morgan": "^1.10.0",
+    "sanitize-html": "^2.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
