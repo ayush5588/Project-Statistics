@@ -11,15 +11,16 @@ var getRepo = (req,res,searchQuery)=>{
             return res.render("results", {message: `No repository found related to search query...`,repos: []});
         }
         var main = [];
-        result.data.items.forEach(function (repo) {
-          var obj = {};
-          (obj.title = repo.name),
-            (obj.description = repo.description),
-            (obj.ownerName = repo.owner.login),
-            (obj.repoURL = repo.html_url);
-          main.push(obj);
+        result.data.items.forEach(function(repo) {
+            var obj = {};
+            obj.title = repo.name;
+            obj.description = repo.description;
+            obj.ownerName = repo.owner.login;
+            obj.stars = repo.stargazers_count;
+            obj.repoURL = repo.html_url;
+            main.push(obj);
         });
-        return res.render("results", { repos: main , message: ''});
+        return res.render("results", { repos: main , message: '',title: searchQuery});
       })
       .catch((e) => {
         console.log(`Error in fetching the data from the github: ${e}`);
