@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Results</title>
+        <meta name="description" content="Results for the repository queried">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../public/results.css">
+        <link rel="stylesheet" type="text/css" href="/public/results.css">
     </head>
     <body>
         <form action="/search" method="GET">
-            <button type="submit">Back to Search Page</button>
+            <button type="submit" id="back-to-search">Back to Search Page</button>
         </form>
         <% if(message) { %>
             <h3><%=message%></h3>
         <% } else { %>
-            <h3><%=title%> Repositories</h3>
+            <h3 id="main-heading"><%=title%> Repositories</h3>
             <ol>
                 <% for (var i=0; i < repos.length; i++) {%>
                     <li id="project-title"> <h2><b><%= repos[i].title %></b></h2></li>

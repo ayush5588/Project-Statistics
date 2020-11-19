@@ -1,3 +1,17 @@
 body {
-    background-color: lightyellow;
+    background-color: lavenderblush;
+}
+
+#back-to-search {
+    margin: 1rem;
+}
+
+#back-to-search:hover {
+    cursor: pointer;
+}
+
+#main-heading {
+    font-size: 2rem;
+    margin-top: -0.1rem;
+    margin-left: 1rem;
 }

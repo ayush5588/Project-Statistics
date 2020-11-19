@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+}
+
+body {
+    background-color: #0b172a;
+}
+
+#userQuery {
+    width: 30%;
+    margin: 50px;
+    padding: 15px;
+    border: 2px solid turquoise;
+}
+
+#search-button {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#search-button:hover {
+    cursor: pointer;
+    background-color: tomato;
+}

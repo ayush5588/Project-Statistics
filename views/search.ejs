@@ -6,12 +6,13 @@
         <title>Results</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../public/search.css">
         
     </head>
     <body>
-        <form action="/search" method="POST">
-            <input type="text" name="userQuery" placeholder="Enter your project name...">
-            <button type="submit">Search</button>
+        <form action="/search/results/" method="GET">
+            <input type="text" name="userQuery" id="userQuery" placeholder="Enter your project name...">
+            <button type="submit" id="search-button">Search</button>
         </form>
     </body>
 </html>

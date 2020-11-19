@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+}
+
+body {
+    background-color: #0b172a;
+}
+
+#main-heading {
+    color: #fd634b;
+    margin: 6rem;
+    margin-top: 8rem;
+    font-size: 3rem;
+}
+
+#tagline {
+    color: white;
+    margin-top: -4rem;
+    margin-left: 6rem;
+    font-size: larger;
+}
+
+#get-in-button{
+    padding: 10px;
+    margin: 6rem;
+    margin-top: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: teal;
+    
+}
+
+#get-in-button:hover {
+    background-color: burlywood;
+    cursor: pointer;
+}
