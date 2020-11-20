@@ -5,17 +5,14 @@ Application to get statistics of the already existing work on the github same as
 ```
 $ git clone 
 ```
+<br />
 
 #### Move to the project directory
 
 ```
 $ npm install 
 ```
-<br />
-
-##### *Make sure to include your mongoDB connection url in the .env file*
-
-<br />
+*__Make sure to include your mongoDB connection url in the .env file__*
 
 ```
 $ node index.js
